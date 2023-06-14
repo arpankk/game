@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flappy Bird Game</title>
+  <style>
+    #gameCanvas {
+      border: 1px solid #000;
+      background-color: #f8f8f8;
+    }
+    .game-over {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, sans-serif;
+      font-size: 36px;
+      color: red;
+      text-align: center;
+      display: none;
+    }
+    #startButton,
+    #restartButton {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+    #restartButton {
+      bottom: 20px;
+    }
+    #thumbnail {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <button id="fullscreenButton">Fullscreen</button>
+  <center><canvas id="gameCanvas" width="700" height="500"></canvas></center>
+  <div id="gameOverText" class="game-over">Game Over</div>
+
+  <button id="startButton">Start Game</button>
+  <button id="restartButton" style="display: none;">Restart Game</button>
+  <script src="game.js"></script>
+</body>
+</html>
